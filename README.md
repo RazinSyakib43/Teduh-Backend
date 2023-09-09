@@ -12,4 +12,39 @@ encodeClothing("DET", "DHT", 250,000) // Returns "GOOD, the best customer doesn'
 
 ```
 
-## Question 2: Find the Missing Number
+## Question 2: MongoDB Query for Psikolog and Reviews
+There are two MongoDB collections, Psikolog and Review, with the following data. Create a MongoDB query to return a response that includes information about psychologists along with their reviews and the average rating from those reviews.
+### Example Respons
+```
+{
+data: [
+{
+_id: ObjectId(“64f4b2344b447807a6d08555”),
+name: "Rafly Ario Bayu",
+reviews: [
+{
+_id: ObjectId(“64f4b3bee7d97fbac7e832f8”),
+psikolog_id: ObjectId(“64f4b2344b447807a6d08555”),
+rating: 4,
+message: "Penjelasannya enak banget"
+},
+{
+_id: ObjectId(“64f4b510d9ac9e73eb1b9207”),
+psikolog_id: ObjectId(“64f4b2344b447807a6d08555”),
+rating: 5,
+message: "Informatif dan edukatif"
+}
+],
+average_rating: 4.5,
+},
+{
+.....,
+...
+},
+{
+....,
+...
+}
+]
+}
+```
